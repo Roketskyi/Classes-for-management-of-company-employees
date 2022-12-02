@@ -1,3 +1,5 @@
+const todayYear = new Date().getFullYear();
+
 class COAXManag {
     constructor(firstName, lastName, phoneNumber, position, education, yearOfEmployment) {
         this.firstName = firstName;
@@ -20,11 +22,11 @@ class COAXManag {
         this._position;
     }
     set yearOfEmployment(value) {
-        if (value > 2022) this._yearOfEmployment = null;
+        if (value > todayYear) this._yearOfEmployment = null;
         else this._yearOfEmployment = value;       
     }
 }
 
-const coaxmanag = new COAXManag('Roman', 'Roketskyi', 380665213423, 'DevOps', 'Software engineering', 2022); 
+const coaxmanag = new COAXManag('Roman', 'Roketskyi', 380665213423, 'DevOps', 'Software engineering', 2023); 
 
 console.log(coaxmanag)
