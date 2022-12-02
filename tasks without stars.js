@@ -9,24 +9,15 @@ class COAXManag {
     }
 
     get position() {
-        return this._position;
+        this._position;
     }
 
     set position(value) {
-        if(value === 'ITManag') {
-            return this._position = value;
-        } else if(value === 'SysAdmin') {
-            return this._position = value;
-        } else if(value === 'JSDeveloper') {
-            return this._position = value;
-        } else if(value === 'DevOps') {
-            return this._position = value;
-        } 
-
-        this._position = undefined;
+        if (['ITManag', 'SysAdmin', 'JSDeveloper', 'DevOps'].includes(value)) this._position = value
+        else this._position = null;
     }
 }
 
-const coaxmanag = new COAXManag('Roman', 'Roketskyi', 380665213423, 'DevOps', 'Software engineering', 2013); 
+const coaxmanag = new COAXManag('Roman', 'Roketskyi', 380665213423, 'JSSDeveloper', 'Software engineering', 2013); 
 
 console.log(coaxmanag)
